@@ -30,7 +30,7 @@ var decryptWalletCtrl = function($scope, $sce, walletService) {
         hwCallistoPath:    "m/44'/820'/0'/0",      // first address: m/44'/820'/0'/0/0
         hwSocialPath:      "m/44'/1128'/0'/0",     // first address: m/44'/1128'/0'/0/0
         hwMusicoinPath:    "m/44'/184'/0'/0",      // first address: m/44'/184'/0'/0/0
-        hwESNetworkPath:   "m/44'/31102'/0'/0",    // first address: m/44'/31102'/0'/0/0
+        hwSkynetPath:      "m/44'/131102'/0'/0",   // first address: m/44'/131102'/0'/0/0
         singularDTVPath:   "m/0'/0'/0'",           // first address: m/0'/0'/0'/0
         hwRskPath:         "m/44'/137'/0'/0",      // first address : m/44'/137'/0'/0/0
     };
@@ -103,7 +103,7 @@ var decryptWalletCtrl = function($scope, $sce, walletService) {
                     $scope.HDWallet.dPath = $scope.HDWallet.hwMusicoinPath;
                     break;
                 case nodes.nodeTypes.ESN:
-                    $scope.HDWallet.dPath = $scope.HDWallet.hwESNetworkPath;
+                    $scope.HDWallet.dPath = $scope.HDWallet.hwSkynetPath;
                     break;
                 default:
                     $scope.HDWallet.dPath = $scope.HDWallet.trezorPath;
@@ -141,7 +141,7 @@ var decryptWalletCtrl = function($scope, $sce, walletService) {
                     $scope.HDWallet.dPath = $scope.HDWallet.hwMusicoinPath;
                     break;
                 case nodes.nodeTypes.ESN:
-                    $scope.HDWallet.dPath = $scope.HDWallet.hwESNetworkPath;
+                    $scope.HDWallet.dPath = $scope.HDWallet.hwSkynetPath;
                     break;
                 default:
                   $scope.HDWallet.dPath = $scope.HDWallet.defaultDPath;

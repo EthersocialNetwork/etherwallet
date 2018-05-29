@@ -20,7 +20,7 @@ nodes.nodeTypes = {
     EGEM: "EGEM",
     CLO: "CLO",
     EAST: "EAST",
-    ESN: "ESN",
+    ESNT: "ESNT",
     X888: "X88",
     MUSIC: "MUSIC",
     Custom: "CUSTOM ETH"
@@ -314,12 +314,12 @@ nodes.nodeList = {
         'lib': new nodes.customNode('https://node.easthub.io', '')
     },
     'esn': {
-        'name': 'ESN',
-        'blockExplorerTX': 'https://ethersocial.net/tx/[[txHash]]',
-        'blockExplorerAddr': 'https://ethersocial.net/addr/[[address]]',
-        'type': nodes.nodeTypes.ESN,
+        'name': 'ESNT',
+        'blockExplorerTX': 'https://test.ethersocial.net/tx/[[txHash]]',
+        'blockExplorerAddr': 'https://test.ethersocial.net/addr/[[address]]',
+        'type': nodes.nodeTypes.ESNT,
         'eip155': true,
-        'chainId': 31102,
+        'chainId': 131102,
         'tokenList': require('./tokens/esnTokens.json'),
         'abiList': require('./abiDefinitions/esnAbi.json'),
         'estimateGas': true,
