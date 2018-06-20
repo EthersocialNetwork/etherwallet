@@ -177,16 +177,20 @@ uiFuncs.generateTx = function(txData, callback) {
                             error: error
                         });
                         return;
+                    }else if (rawTx.chainId === 31102) {
+                        EIP155Supported = false; 
                     }
-                    var splitVersion = result['version'].split('.');
-                    if (parseInt(splitVersion[0]) > 1) {
-                        EIP155Supported = true;
-                    } else
-                    if (parseInt(splitVersion[1]) > 0) {
-                        EIP155Supported = true;
-                    } else
-                    if (parseInt(splitVersion[2]) > 2) {
-                        EIP155Supported = true;
+                    else	{
+                        var splitVersion = result['version'].split('.');
+                        if (parseInt(splitVersion[0]) > 1) {
+                            EIP155Supported = true;
+                        } else
+                        if (parseInt(splitVersion[1]) > 0) {
+                            EIP155Supported = true;
+                        } else
+                        if (parseInt(splitVersion[2]) > 2) {
+                            EIP155Supported = true;
+                        }
                     }
                     uiFuncs.signTxLedger(app, eTx, rawTx, txData, !EIP155Supported, callback);
                 }
